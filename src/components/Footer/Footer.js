@@ -17,7 +17,7 @@ const Footer = () => {
           </h3>
         </div>
         <div className="footer text-light bg-dark pb-3 px-2">
-          <Row xs={1} md={3} xl={3} className="g-4">
+          <Row xs={1} md={2} xl={3} className="g-4">
             <Col>
               <Card.Body>
                 <Card.Title>
@@ -86,22 +86,22 @@ const Footer = () => {
                       <ul>
                         <ol>
                           <p>
-                            <NavLink to="/">Home</NavLink>
+                            <a href="/">Home</a>
                           </p>
                           <p>
-                            <NavLink to="/">Apartments</NavLink>
+                            <a href="/">Apartments</a>
                           </p>
                           <p>
-                            <NavLink to="/">Resorts</NavLink>
+                            <a href="/">Resorts</a>
                           </p>
                           <p>
-                            <NavLink to="/">Hostels</NavLink>
+                            <a href="/">Hostels</a>
                           </p>
                           <p>
-                            <NavLink to="/">Guest Houses</NavLink>
+                            <a href="/">Guest Houses</a>
                           </p>
                           <p>
-                            <NavLink to="/">Villas</NavLink>
+                            <a href="/">Villas</a>
                           </p>
                         </ol>
                       </ul>
@@ -145,7 +145,7 @@ const Footer = () => {
                     />
                   </div>
                   <div className="p-4">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary text-center">
                       Subscribe Now
                     </button>
                   </div>

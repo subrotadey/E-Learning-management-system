@@ -1,7 +1,10 @@
-a{
+ol p a{
     text-decoration: none;
+    color: white;
 }
-
+body{
+    overflow-x: hidden;
+  }
 .top-footer{
     background-color: #00224f;
     color: white;
@@ -25,4 +28,5 @@ a{
 }
 .icon:hover{
     color: blue;
+    transition: ease-out .5s;
 }
