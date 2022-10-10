@@ -1,8 +1,6 @@
 import React from "react";
-import { Card, Col, NavLink, Row } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
-// import { BsFacebook } from 'react-icons/fa';
-// import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
