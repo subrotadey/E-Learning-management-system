@@ -1,5 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 body{
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .bg-myRed{
   background-color: crimson;

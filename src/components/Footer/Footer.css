@@ -1,6 +1,7 @@
 a{
     text-decoration: none;
 }
+
 .top-footer{
     background-color: #00224f;
     color: white;
@@ -18,4 +19,10 @@ a{
 }
 .center-item{
     text-align: center;
+}
+.icon{
+    color: #ffffff;
+}
+.icon:hover{
+    color: blue;
 }

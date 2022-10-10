@@ -1,5 +1,7 @@
 import React from "react";
 import { Card, Col, NavLink, Row } from "react-bootstrap";
+import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
+// import { BsFacebook } from 'react-icons/fa';
 // import { Link } from "react-router-dom";
 import "./Footer.css";
 
@@ -15,7 +17,7 @@ const Footer = () => {
           </h3>
         </div>
         <div className="footer text-light bg-dark pb-3 px-2">
-          <Row xs={1} md={1} xl={3} className="g-4">
+          <Row xs={1} md={3} xl={3} className="g-4">
             <Col>
               <Card.Body>
                 <Card.Title>
@@ -34,10 +36,15 @@ const Footer = () => {
                     <a href="/">info@lonelyplanet.com</a>
                   </p>
                   <p>031-656565</p>
-                  <div>
-                    <i className="fab fa-facebook-f px-2 fs-4"></i>
-                    <i className="fab fa-twitter px-4 fs-4"></i>
-                    <i className="fab fa-instagram px-2 fs-4"></i>
+                  <div className="d-flex justify-content-around">
+                    <div style={{paddingTop:"50px"}}>
+                      <h5>Follow us</h5>
+                    </div>
+                    <div>
+                    <h2><a className="icon" href="https://www.facebook.com/subrota.dey540"><BsFacebook/></a></h2>
+                    <h2><a className="icon" href="https://www.facebook.com/subrota.dey540"><BsTwitter/></a></h2>
+                    <h2><a className="icon" href="https://www.facebook.com/subrota.dey540"><BsLinkedin/></a></h2>
+                    </div>
                   </div>
                 </Card.Text>
               </Card.Body>
@@ -150,13 +157,11 @@ const Footer = () => {
           <hr />
           <div className="center-item">
             <p>
-              
               <small className="text-light">
-                Lonely Planet Travelling Agency &copy; 2021 | All Rights
+                Lonely Planet Traveling Agency &copy; 2021 | All Rights
                 Reserved
               </small>
-            </p>
-            <p>
+            <p/>
               <small>Developed By Subrota@Dey</small>
             </p>
           </div>
