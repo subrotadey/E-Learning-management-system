@@ -10,8 +10,7 @@ const Footer = () => {
         <div className="top-footer text-white py-5 ">
           <h1>Be with Us</h1>
           <h3>
-            Get healthy service, treatment and solutions to your problems from
-            our experts!
+          Leading companies use the same courses to help employees keep their skills fresh.
           </h3>
         </div>
         <div className="footer text-light bg-dark pb-3 px-2">
@@ -26,14 +25,12 @@ const Footer = () => {
                 <Card.Text className="center-item">
                   <p>1675/A, O.R Nizam Road Chittagong Bangladesh</p>
                   <p>
-                    
-                    <a href="/">http://www.LPlanet.com/</a>
+                    <a href="https://e-learning-management-system.netlify.app/">E-Learning System</a>
                   </p>
                   <p>
-                    
-                    <a href="/">info@lonelyplanet.com</a>
+                    <a href="/">info@e.learning.com</a>
                   </p>
-                  <p>031-656565</p>
+                  <p>+880 1516 ******</p>
                   <div className="d-flex justify-content-around">
                     <div style={{paddingTop:"50px"}}>
                       <h5>Follow us</h5>
@@ -156,7 +153,7 @@ const Footer = () => {
           <div className="center-item">
             <p>
               <small className="text-light">
-                Lonely Planet Traveling Agency &copy; 2021 | All Rights
+                E-Learning Management System &copy; 2022 | All Rights
                 Reserved
               </small>
             <p/>
