@@ -8,6 +8,8 @@ import Navbars from "./Pages/Shared/Navbars";
 import Footer from "./Pages/Shared/Footer";
 import Courses from "./Pages/Courses/Courses";
 import Review from "./Pages/Review/Review";
+import Blog from "./Pages/Blog/Blog";
+import Contact from "./Pages/Contact/Contact";
 
 function App() {
   return (
@@ -17,9 +19,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/review" element={<Review />} />
-        
+        <Route path="/blog" element={<Blog/>}/>
         <Route path="/about" element={<About />} />
-        
+        <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
       </Routes>
       <Footer></Footer>

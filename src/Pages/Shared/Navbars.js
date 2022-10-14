@@ -21,7 +21,7 @@ const Navbars = () => {
               <NavDropdown.Item href="#courses/python">Python</NavDropdown.Item>
               <NavDropdown.Item href="#courses/mongo">MongoDB</NavDropdown.Item>
             </NavDropdown>
-            <Link className="nav-link" to="/blog">Review</Link>
+            <Link className="nav-link" to="/review">Review</Link>
             <Link className="nav-link" to="/blog">Blog</Link>
             <Link className="nav-link" to="/about">About</Link>
             <Link className="nav-link" to="/contact">Contact</Link>
