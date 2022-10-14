@@ -1,14 +1,27 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
-import Navbars from "./components/Navbars/Navbars";
-import  Footer  from "./components/Footer/Footer";
-import Home from "./components/Home/Home";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
+import Login from "./Pages/Login/Login";
+import Navbars from "./Pages/Shared/Navbars";
+import Footer from "./Pages/Shared/Footer";
+import Courses from "./Pages/Courses/Courses";
+import Review from "./Pages/Review/Review";
 
 function App() {
   return (
     <div className="App">
       <Navbars></Navbars>
-      <Home></Home>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/review" element={<Review />} />
+        
+        <Route path="/about" element={<About />} />
+        
+        <Route path="/login" element={<Login />} />
+      </Routes>
       <Footer></Footer>
     </div>
   );

@@ -7,13 +7,13 @@ const Footer = () => {
   return (
     <div>
       <div>
-        <div className="top-footer text-white py-5 ">
+        <div className="top-footer text-white py-5 " >
           <h1>Be with Us</h1>
           <h3>
           Leading companies use the same courses to help employees keep their skills fresh.
           </h3>
         </div>
-        <div className="footer text-light bg-dark pb-3 px-2">
+        <div className="footer text-light bg-dark pb-3 px-2" >
           <Row xs={1} md={2} xl={3} className="g-4">
             <Col>
               <Card.Body>
