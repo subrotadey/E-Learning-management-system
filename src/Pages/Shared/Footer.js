@@ -6,7 +6,6 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div>
-      <div>
         <div className="top-footer text-white py-5 " >
           <h1>Be with Us</h1>
           <h3>
@@ -31,14 +30,14 @@ const Footer = () => {
                     <a href="/">info@e.learning.com</a>
                   </p>
                   <p>+880 1516 ******</p>
-                  <div className="d-flex justify-content-around">
-                    <div style={{paddingTop:"50px"}}>
+                  <div className="d-flex justify-content-evenly mt-5">
+                    <div className="d-flex align-items-center">
                       <h5>Follow us</h5>
                     </div>
-                    <div>
-                    <h2><a className="icon" href="https://www.facebook.com/subrota.dey540"><BsFacebook/></a></h2>
-                    <h2><a className="icon" href="https://www.facebook.com/subrota.dey540"><BsTwitter/></a></h2>
-                    <h2><a className="icon" href="https://www.facebook.com/subrota.dey540"><BsLinkedin/></a></h2>
+                    <div className="d-flex">
+                    <h2 className="mx-3"><a className="icon" href="https://www.facebook.com/subrota.dey540"><BsFacebook/></a></h2>
+                    <h2 className="mx-3"><a className="icon" href="https://www.facebook.com/subrota.dey540"><BsTwitter/></a></h2>
+                    <h2 className="mx-3"><a className="icon" href="https://www.facebook.com/subrota.dey540"><BsLinkedin/></a></h2>
                     </div>
                   </div>
                 </Card.Text>
@@ -47,12 +46,11 @@ const Footer = () => {
             <Col>
               <Card.Body>
                 <Card.Title>
-                  
                   <h3 className="center-item">Services</h3>
                 </Card.Title>
                 <hr />
                 <Card.Text>
-                  <div className="d-flex justify-content-around">
+                  <div className="d-flex justify-content-evenly">
                     <div>
                       <ul>
                         <ol>
@@ -139,7 +137,7 @@ const Footer = () => {
                       placeholder="Password"
                     />
                   </div>
-                  <div className="p-4">
+                  <div className="py-4">
                     <button type="submit" class="btn btn-primary text-center">
                       Subscribe Now
                     </button>
@@ -162,7 +160,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
