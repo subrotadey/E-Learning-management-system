@@ -11,11 +11,11 @@ const Banner = () => {
           }}>
             <Container>
               <Row className='rounded-4 m-4 d-flex align-items-center' >
-                <Col sm={8}  xs={12} >
+                <Col sm={8}  xs={12} className='text-center'>
                     <h2 className='uppercase'>Transform Your Life Through Education</h2>
                     <p>Learners around the world are launching new careers, <br /> advancing in their fields, <br /> and enriching their lives.</p>
                 </Col>
-                <Col sm={4}  xs={12} ><img src={banner} alt="" className='w-75 m-3 rounded-4' /></Col>
+                <Col sm={4}  xs={12} className='text-center' ><img src={banner} alt="" className='w-75 m-3 rounded-4' /></Col>
               </Row>
             </Container>
         </div>
