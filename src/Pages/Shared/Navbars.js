@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Navbars = () => {
   return (
       <Navbar bg="dark" variant="dark" sticky="top" expand="sm" collapseOnSelect>
-        <Container>
+        <Container className="">
         <Link className="nav-link" to="/">
           <Navbar.Brand><img src={logo} width="40px" height="40px" alt="" /> E-Learning</Navbar.Brand>
         </Link>

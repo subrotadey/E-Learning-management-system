@@ -10,10 +10,12 @@ import Courses from "./Pages/Courses/Courses";
 import Review from "./Pages/Review/Review";
 import Blog from "./Pages/Blog/Blog";
 import Contact from "./Pages/Contact/Contact";
+import WebHeader from "./Pages/Home/WebHeader";
 
 function App() {
   return (
     <div className="App">
+      <WebHeader></WebHeader>
       <Navbars></Navbars>
       <Routes>
         <Route path="/" element={<Home />} />

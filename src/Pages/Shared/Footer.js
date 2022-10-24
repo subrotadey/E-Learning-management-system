@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
-import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { BsFacebook, BsTwitter } from "react-icons/bs";
+import { FaLinkedinIn } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -22,7 +23,7 @@ const Footer = () => {
                 </Card.Title>
                 <hr />
                 <Card.Text className="center-item">
-                  <p>1675/A, O.R Nizam Road Chittagong Bangladesh</p>
+                  <p>1675/A, O.R Nizam Road, Chittagong, Bangladesh</p>
                   <p>
                     <a href="https://e-learning-management-system.netlify.app/">E-Learning System</a>
                   </p>
@@ -34,10 +35,10 @@ const Footer = () => {
                     <div className="d-flex align-items-center">
                       <h5>Follow us</h5>
                     </div>
-                    <div className="d-flex">
+                    <div className="d-flex follow">
                     <h2 className="mx-3"><a className="icon" href="https://www.facebook.com/subrota.dey540"><BsFacebook/></a></h2>
                     <h2 className="mx-3"><a className="icon" href="https://www.facebook.com/subrota.dey540"><BsTwitter/></a></h2>
-                    <h2 className="mx-3"><a className="icon" href="https://www.facebook.com/subrota.dey540"><BsLinkedin/></a></h2>
+                    <h2 className="mx-3"><a className="icon" href="https://www.facebook.com/subrota.dey540"><FaLinkedinIn/></a></h2>
                     </div>
                   </div>
                 </Card.Text>

@@ -24,9 +24,17 @@ body{
     text-align: center;
 }
 .icon{
-    color: #ffffff;
+    color: rgb(98, 98, 235);
+    /* padding: 2%;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: white; */
 }
 .icon:hover{
-    color: blue;
+    color: white;
     transition: ease-out .5s;
+    /*  */
+}
+.follow{
+    border-left: 3px solid white;
 }
