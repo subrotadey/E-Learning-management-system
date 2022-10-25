@@ -1,0 +1,25 @@
+.icon-style{
+    background-color: #F5D76E;
+    margin: 5px;
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
+    border-radius: 10%;
+    width: 40px;
+    max-height: 50px;
+    min-width: 50px;
+}
+.characteristic-style{
+    margin-left: 4%;
+}
+.card-text{
+    opacity: .7;
+}
+/* .img-style{
+    background-color: #F5D76E;
+    margin: 5px;
+    padding: 7px;
+    color: white;
+    font-weight: bolder;
+    border-radius: 10%;
+} */
