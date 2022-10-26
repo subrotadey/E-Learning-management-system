@@ -1,0 +1,25 @@
+.modal-style{
+    width: 100%;
+    height: 300px;
+}
+.playbtn{
+    width: 100px;
+    height: 300px;
+    cursor: pointer;
+}
+.backgroundImage{
+    opacity: .7;
+}
+.background {
+    background: url(../../../assets/images/modal.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    opacity: .8;
+  }
+.background:hover{
+    
+    color: yellow;
+    transition: ease-out .5s;
+}

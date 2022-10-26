@@ -12,7 +12,7 @@ const Navbars = () => {
         </Link>
         <Navbar.Toggle className="coloring" />
         <Navbar.Collapse>
-          <Nav className="ms-auto">
+          <Nav className="ms-auto  text-uppercase">
             <NavDropdown title="Courses">
               <NavDropdown.Item href="#courses/c">C</NavDropdown.Item>
               <NavDropdown.Item href="#courses/c++">C++</NavDropdown.Item>
@@ -21,6 +21,7 @@ const Navbars = () => {
               <NavDropdown.Item href="#courses/python">Python</NavDropdown.Item>
               <NavDropdown.Item href="#courses/mongo">MongoDB</NavDropdown.Item>
             </NavDropdown>
+            <Link className="nav-link" to="/teachers">Teachers</Link>
             <Link className="nav-link" to="/review">Review</Link>
             <Link className="nav-link" to="/blog">Blog</Link>
             <Link className="nav-link" to="/about">About</Link>

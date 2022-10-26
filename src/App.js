@@ -11,6 +11,7 @@ import Review from "./Pages/Review/Review";
 import Blog from "./Pages/Blog/Blog";
 import Contact from "./Pages/Contact/Contact";
 import WebHeader from "./Pages/Home/WebHeader";
+import Teachers from "./Pages/Teachers/Teachers";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/teachers" element={<Teachers />} />
         <Route path="/review" element={<Review />} />
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/about" element={<About />} />

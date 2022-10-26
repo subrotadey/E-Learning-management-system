@@ -24,14 +24,14 @@ body{
     text-align: center;
 }
 .icon{
-    color: rgb(98, 98, 235);
-    /* padding: 2%;
-    border: 2px solid white;
+    padding: 8%;
+    color: white;
+    /* border: 2px solid white; */
     border-radius: 5px;
-    background-color: white; */
+    /* background-color: white; */
 }
 .icon:hover{
-    color: white;
+    color: yellow;
     transition: ease-out .5s;
     /*  */
 }

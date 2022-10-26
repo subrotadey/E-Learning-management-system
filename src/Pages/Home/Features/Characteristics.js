@@ -7,6 +7,8 @@ import microphone from '../../../assets/icons/microphone.svg'
 import file from '../../../assets/icons/file.svg'
 import mobile from '../../../assets/icons/mobile.svg'
 import support from '../../../assets/icons/support.svg'
+import bg from '../../../assets/images/bg1.svg'
+import './Characteristics.css'
 
 const Characteristics = () => {
 
@@ -20,12 +22,14 @@ const Characteristics = () => {
     // ]
 
     return (
-        <Container>
+        <Container style={{ 
+            backgroundImage: `url(${bg})` 
+          }}>
             <div>
-                <h1>MEMBERSHIPS
-                    INCLUDE</h1>
-                <h5>Phasellus non dolor nibh. Nullam elementum tellus pretium feugiat.
-                    Cras dictum tellus dui, vitae sollicitudin ipsum tincidunt in. Sed tincidunt tristique enim sed sollcitudin.</h5>
+                <h1 className='border-style'>
+                    <span>MEMBERSHIPS</span>
+                     INCLUDE</h1>
+                <h5>Phasellus non dolor nibh. Nullam elementum tellus pretium feugiat. Cras dictum tellus dui, vitae sollicitudin ipsum tincidunt in. Sed tincidunt tristique enim sed sollcitudin.</h5>
             </div>
             <Row  md={3} sm={1} className="grid grid-cols-1 lg:grid-cols-3 g-4 my-5">
                 <CharacteristicsCard cardTitle={'Unlimited access'} imgs={unlock}></CharacteristicsCard>
