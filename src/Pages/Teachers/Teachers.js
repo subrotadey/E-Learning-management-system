@@ -82,7 +82,7 @@ const Teachers = () => {
                 <Container>
                 <h1 className='m-0 p-0'>Our  Teachers</h1>
                 <Breadcrumb>
-                  <Breadcrumb.Item><Link className='text-white' to="/home">Home</Link></Breadcrumb.Item>
+                  <Breadcrumb.Item><Link className='text-white' to="/">Home</Link></Breadcrumb.Item>
                   <Breadcrumb.Item active>Teachers</Breadcrumb.Item>
                 </Breadcrumb>
                 </Container>
