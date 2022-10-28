@@ -1,0 +1,8 @@
+.breadcrumb-style{
+    width: 100%;
+    height: 150px;
+    background-color: #EAB970;
+    color: white;
+    display: flex;
+    align-items: center;
+}

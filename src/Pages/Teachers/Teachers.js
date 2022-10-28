@@ -1,10 +1,12 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Breadcrumb, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import teacher1 from '../../assets/images/teacher/teacher1.jpg'
 import teacher2 from '../../assets/images/teacher/teacher2.jpg'
 import teacher3 from '../../assets/images/teacher/teacher3.jpg'
 import teacher4 from '../../assets/images/teacher/teacher4.jpg'
 import Teacher from './Teacher';
+import './Teachers.css'
 
 const Teachers = () => {
 
@@ -51,19 +53,51 @@ const Teachers = () => {
             designation: 'Graphic Designer',
             Description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, consectetur?'
         },
+        {
+            _id:6,
+            img: teacher1,
+            name:'ANA DOE',
+            designation: 'Graphic Designer',
+            Description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, consectetur?'
+        },
+        {
+            _id:6,
+            img: teacher4,
+            name:'ANA DOE',
+            designation: 'Graphic Designer',
+            Description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, consectetur?'
+        },
+        {
+            _id:6,
+            img: teacher3,
+            name:'ANA DOE',
+            designation: 'Graphic Designer',
+            Description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, consectetur?'
+        },
     ];
 
     return (
-        <Container>
-            <Row xs={1} sm={2} md={4} className="g-4">
-            {
-                teacher.map(teach =><Teacher
-                    key={teacher._id}
-                    teach={teach}
-                ></Teacher>)
-            }
-            </Row>
-        </Container>
+        <div>
+            <div className='breadcrumb-style'>
+                <Container>
+                <h1 className='m-0 p-0'>Our  Teachers</h1>
+                <Breadcrumb>
+                  <Breadcrumb.Item><Link className='text-white' to="/home">Home</Link></Breadcrumb.Item>
+                  <Breadcrumb.Item active>Teachers</Breadcrumb.Item>
+                </Breadcrumb>
+                </Container>
+            </div>
+            <Container>
+                <Row xs={1} sm={2} md={4} className="g-4 my-5">
+                {
+                    teacher.map(teach =><Teacher
+                        key={teacher._id}
+                        teach={teach}
+                    ></Teacher>)
+                }
+                </Row>
+            </Container>
+        </div>
     );
 };
 

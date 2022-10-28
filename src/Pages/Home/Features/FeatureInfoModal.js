@@ -11,7 +11,7 @@ const FeatureInfoModal = () => {
   const handleShow = () => setShow(true);
 
     return (
-        <Container className='background'>
+        <Container className='background my-5'>
             <BsPlayCircle  variant="primary" onClick={handleShow} className='playbtn' ></BsPlayCircle>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Body>
