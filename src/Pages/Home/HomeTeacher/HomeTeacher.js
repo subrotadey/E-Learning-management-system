@@ -1,12 +1,13 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Button, Card, Col } from 'react-bootstrap';
+import { Card, Col } from 'react-bootstrap';
 import { BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
-import './Teacher.css'
+import './HomeTeacher.css'
 
-const Teacher = ({ teach }) => {
+const HomeTeacher = ({ teach }) => {
     return (
         <>
-            <Col className='teacher-card-style'>
+            <Col className='teacher-card-style text-center mx-3'>
               <Card>
                 <Card.Img variant="top" src={teach.img} />
                 <Card.Body>
@@ -15,18 +16,16 @@ const Teacher = ({ teach }) => {
                     <small>{teach.designation}</small>
                   </Card.Text>
                 </Card.Body>
+                <FontAwesomeIcon icon="fa-brands fa-facebook" />
                 <div className='d-flex justify-content-center fs-1 my-3'>
                 <BsFacebook></BsFacebook>
                 <BsTwitter className='mx-4'></BsTwitter>
                 <BsLinkedin></BsLinkedin>
                 </div>
-                <Card.Footer className='d-flex justify-content-center'>
-                  <Button className="footer-btn" bg="warning" >View Details</Button>
-                </Card.Footer>
               </Card>
             </Col>
         </>
     );
 };
 
-export default Teacher;
+export default HomeTeacher;

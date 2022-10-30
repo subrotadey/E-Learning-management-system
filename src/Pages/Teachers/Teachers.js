@@ -10,8 +10,8 @@ import './Teachers.css'
 
 const Teachers = () => {
 
-    const teacher = [
-        {
+    const teacherInfo = [
+        {   
             _id:1,
             img: teacher1,
             name:'ANA DOE',
@@ -79,8 +79,8 @@ const Teachers = () => {
     return (
         <div>
             <div className='breadcrumb-style'>
-                <Container>
-                <h1 className='m-0 p-0'>Our  Teachers</h1>
+                <Container className='py-2'>
+                <h1 className='px-0'>Our  Teachers</h1>
                 <Breadcrumb>
                   <Breadcrumb.Item><Link className='text-white' to="/">Home</Link></Breadcrumb.Item>
                   <Breadcrumb.Item active>Teachers</Breadcrumb.Item>
@@ -90,8 +90,8 @@ const Teachers = () => {
             <Container>
                 <Row xs={1} sm={2} md={4} className="g-4 my-5">
                 {
-                    teacher.map(teach =><Teacher
-                        key={teacher._id}
+                    teacherInfo.map(teach =><Teacher
+                        key={teacherInfo._id}
                         teach={teach}
                     ></Teacher>)
                 }

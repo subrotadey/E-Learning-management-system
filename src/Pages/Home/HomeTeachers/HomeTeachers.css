@@ -1,0 +1,12 @@
+.home-btn{
+    background-color: #EAB970 !important;
+    border: none !important;
+    border: 2px solid #EAB970 !important;
+
+}
+.home-btn:hover{
+    background-color: white !important;
+    color: #EAB970 !important;
+    transition: ease-out .3s;
+    border: 2px solid #EAB970 !important;
+}

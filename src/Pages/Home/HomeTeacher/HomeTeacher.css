@@ -1,0 +1,13 @@
+.teacher-card-style{
+    font-family:   'Montserrat', sans-serif;
+}
+.footer-btn{
+    background-color: green !important;
+    border: none !important;
+}
+.footer-btn:hover{
+    background-color: white !important;
+    color: green !important;
+    transition: ease-out .3s;
+    /* border: #EAB970 !important; */
+}
