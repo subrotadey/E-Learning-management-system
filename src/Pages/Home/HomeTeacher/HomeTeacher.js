@@ -7,7 +7,7 @@ import './HomeTeacher.css'
 const HomeTeacher = ({ teach }) => {
     return (
         
-            <Col className='teacher-card-style text-center mx-3'>
+            <Col className='teacher-card-style text-center mx-3 card-height'>
               <Card>
                 <Card.Img variant="top" src={teach.img} className='img-trans'/>
                 <Card.Body>

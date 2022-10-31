@@ -1,8 +1,9 @@
 .teacher-card-style{
     font-family:   'Montserrat', sans-serif;
+    border: none;
 }
 .footer-btn{
-    background-color: #EAB970 !important;
+    background-color: black !important;
     border: none !important;
 }
 .footer-btn:hover{
@@ -15,11 +16,15 @@
     padding: 3px;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: black !important;
-    
-    /* background-color: white !important; */
+}
+.i-style a{
+    color: black;
 }
 .i-style :hover{
     color: #EAB970;
-    transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.card-bg{
+    background-color: rgb(231, 229, 229) !important;
+    box-shadow: 10px 5px 5px rgb(212, 199, 199);
 }

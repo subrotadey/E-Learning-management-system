@@ -7,7 +7,7 @@ const Teacher = ({ teach }) => {
     return (
         <>
             <Col className='teacher-card-style'>
-              <Card>
+              <Card className='card-bg'>
                 <Card.Img variant="top" src={teach.img} />
                 <Card.Body>
                   <Card.Title className='fw-bold'>{teach.name}</Card.Title>
@@ -16,7 +16,7 @@ const Teacher = ({ teach }) => {
                   </Card.Text>
                 </Card.Body>
                 <div className='d-flex justify-content-around fs-1 i-style'>
-                  <a href="www.facebook.com"><BsFacebook></BsFacebook></a>
+                  <a href="www.facebook.com" className=''><BsFacebook className=''></BsFacebook></a>
                   <a href="www.twitter.com"><BsTwitter></BsTwitter></a>
                   <a href="www.linkedin.com"><BsLinkedin></BsLinkedin></a>
                 </div>
