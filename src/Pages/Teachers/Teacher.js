@@ -15,10 +15,10 @@ const Teacher = ({ teach }) => {
                     <small>{teach.designation}</small>
                   </Card.Text>
                 </Card.Body>
-                <div className='d-flex justify-content-center fs-1 my-3'>
-                <BsFacebook></BsFacebook>
-                <BsTwitter className='mx-4'></BsTwitter>
-                <BsLinkedin></BsLinkedin>
+                <div className='d-flex justify-content-around fs-1 i-style'>
+                  <a href="www.facebook.com"><BsFacebook></BsFacebook></a>
+                  <a href="www.twitter.com"><BsTwitter></BsTwitter></a>
+                  <a href="www.linkedin.com"><BsLinkedin></BsLinkedin></a>
                 </div>
                 <Card.Footer className='d-flex justify-content-center'>
                   <Button className="footer-btn" bg="warning" >View Details</Button>

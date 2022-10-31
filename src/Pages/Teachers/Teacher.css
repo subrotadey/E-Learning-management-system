@@ -11,3 +11,15 @@
     transition: ease-out .3s;
     border: #EAB970 !important;
 }
+.i-style{
+    padding: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black !important;
+    
+    /* background-color: white !important; */
+}
+.i-style :hover{
+    color: #EAB970;
+    transition: .3s ease-in-out;
+}

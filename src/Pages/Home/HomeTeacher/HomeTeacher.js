@@ -6,10 +6,10 @@ import './HomeTeacher.css'
 
 const HomeTeacher = ({ teach }) => {
     return (
-        <>
+        
             <Col className='teacher-card-style text-center mx-3'>
               <Card>
-                <Card.Img variant="top" src={teach.img} />
+                <Card.Img variant="top" src={teach.img} className='img-trans'/>
                 <Card.Body>
                   <Card.Title className='fw-bold'>{teach.name}</Card.Title>
                   <Card.Text>
@@ -17,14 +17,14 @@ const HomeTeacher = ({ teach }) => {
                   </Card.Text>
                 </Card.Body>
                 <FontAwesomeIcon icon="fa-brands fa-facebook" />
-                <div className='d-flex justify-content-center fs-1 my-3'>
+                <div className='d-flex justify-content-around fs-1 ico-style'>
                 <BsFacebook></BsFacebook>
-                <BsTwitter className='mx-4'></BsTwitter>
+                <BsTwitter></BsTwitter>
                 <BsLinkedin></BsLinkedin>
                 </div>
               </Card>
             </Col>
-        </>
+        
     );
 };
 

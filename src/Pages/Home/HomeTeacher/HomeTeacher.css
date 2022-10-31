@@ -11,3 +11,18 @@
     transition: ease-out .3s;
     /* border: #EAB970 !important; */
 }
+
+.ico-style{
+    padding: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.ico-style :hover{
+    color: #EAB970;
+    
+    transition: .2s ease-in-out;
+}
+.img-trans:hover{
+    transition: .3s ease-out;
+    transform: rotateZ(90);
+}

@@ -54,22 +54,15 @@ const Teachers = () => {
             Description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, consectetur?'
         },
         {
-            _id:6,
+            _id:7,
             img: teacher1,
             name:'ANA DOE',
             designation: 'Graphic Designer',
             Description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, consectetur?'
         },
         {
-            _id:6,
+            _id:8,
             img: teacher4,
-            name:'ANA DOE',
-            designation: 'Graphic Designer',
-            Description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, consectetur?'
-        },
-        {
-            _id:6,
-            img: teacher3,
             name:'ANA DOE',
             designation: 'Graphic Designer',
             Description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, consectetur?'
