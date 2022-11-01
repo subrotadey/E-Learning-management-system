@@ -5,6 +5,7 @@ import React from 'react';
 import Banner from './Banner';
 import Characteristics from './Features/Characteristics';
 import FeatureInfo from './Features/FeatureInfo';
+import HomeReviews from './HomeReviews/HomeReviews';
 import HomeTeachers from './HomeTeachers/HomeTeachers';
 import Slider from './Slider';
 
@@ -16,6 +17,7 @@ const Home = () => {
             <Characteristics></Characteristics>
             <FeatureInfo></FeatureInfo>
             <HomeTeachers></HomeTeachers>
+            <HomeReviews></HomeReviews>
         </div>
     );
 };

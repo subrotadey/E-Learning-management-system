@@ -156,7 +156,7 @@ const Footer = () => {
                 Reserved
               </small>
               <br />
-              <small>Developed By Subrot@Dey</small>
+              <small>Developed By team SE</small>
             </p>
           </div>
         </div>
