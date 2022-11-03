@@ -156,7 +156,7 @@ const Footer = () => {
                 Reserved
               </small>
               <br />
-              <small>Developed By team SE</small>
+              <small>Developed By EDULOGY</small>
             </p>
           </div>
         </div>

@@ -16,7 +16,7 @@ import HomeReview from "./HomeReview/HomeReview";
 const HomeReviews = () => {
   const reviewInfo = [
     {
-      _id: 1,
+      _id:1,
       img: review1,
       name: "Lawrence Petrie",
       date: "10/12/2022",
@@ -24,7 +24,7 @@ const HomeReviews = () => {
       description: "very effective course",
     },
     {
-      _id: 2,
+      _id:2,
       img: review2,
       name: "Lucas Aquilani",
       date: "10/12/2022",
@@ -32,7 +32,7 @@ const HomeReviews = () => {
       description: "very effective course",
     },
     {
-      _id: 3,
+      _id:3,
       img: review3,
       name: "Ruth Aquilani",
       date: "10/12/2022",
@@ -40,7 +40,7 @@ const HomeReviews = () => {
       description: "very effective course",
     },
     {
-      _id: 4,
+      _id:4,
       img: review4,
       name: "Jane Ansems",
       date: "10/12/2022",
@@ -48,7 +48,7 @@ const HomeReviews = () => {
       description: "very effective course",
     },
     {
-      _id: 5,
+      _id:5,
       img: review5,
       name: "Jack Peters",
       date: "10/12/2022",
@@ -56,7 +56,7 @@ const HomeReviews = () => {
       description: "very effective course",
     },
     {
-      _id: 6,
+      _id:6,
       img: review6,
       name: "Lora Portilla",
       date: "10/12/2022",
@@ -64,7 +64,7 @@ const HomeReviews = () => {
       description: "very effective course",
     },
     {
-      _id: 7,
+      _id:7,
       img: review7,
       name: "Anna Phillips",
       date: "10/12/2022",
@@ -72,7 +72,7 @@ const HomeReviews = () => {
       description: "very effective course",
     },
     {
-      _id: 8,
+      _id:8,
       img: review8,
       name: "Roland Walker",
       date: "10/12/2022",
@@ -82,19 +82,20 @@ const HomeReviews = () => {
   ];
 
   return (
-    <Container className="review_style my-4">
+    <Container className="review_style">
         <h1 className='border-style'>
             <span>OUR STUDENTS</span>
              Says</h1>
         <h5>Phasellus non dolor nibh. Nullam elementum tellus pretium feugiat. Cras dictum tellus dui, vitae sollicitudin ipsum tincidunt in. Sed tincidunt tristique enim sed sollcitudin.</h5> 
       <div>
-        <Container className="my-2">
           <Marquee speed={40}>
             {reviewInfo.map((review) => (
-              <HomeReview key={reviewInfo._id} review={review}></HomeReview>
+              <HomeReview 
+              key={reviewInfo._id} 
+              review={review}
+              ></HomeReview>
             ))}
           </Marquee>
-        </Container>
       </div>
     </Container>
   );
