@@ -45,7 +45,7 @@ const HomeTeachers = () => {
             <Row xs={1} sm={2} md={4} className="g-4 my-5 d-flex justify-content-center">
             {
                 teacher.map(teach =><HomeTeacher
-                    key={teacher._id}
+                    key={teach._id}
                     teach={teach}
                 ></HomeTeacher>)
             }

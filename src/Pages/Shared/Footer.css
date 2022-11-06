@@ -5,6 +5,9 @@ ol p a{
 body{
     overflow-x: hidden;
   }
+.footer_style{
+    margin-bottom: -25px;
+}
 .top-footer{
     background-color: #00224f;
     color: white;
@@ -37,4 +40,7 @@ body{
 }
 .follow{
     border-left: 3px solid white;
+}
+.nav_style{
+    margin-top: -1px;
 }

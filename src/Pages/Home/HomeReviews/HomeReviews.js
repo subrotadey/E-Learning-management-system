@@ -91,7 +91,7 @@ const HomeReviews = () => {
           <Marquee speed={40}>
             {reviewInfo.map((review) => (
               <HomeReview 
-              key={reviewInfo._id} 
+              key={review._id} 
               review={review}
               ></HomeReview>
             ))}
