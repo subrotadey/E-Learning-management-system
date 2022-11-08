@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import './Teacher.css'
 
 const Teacher = ({ teacher }) => {
-  console.log(teacher)
+  // console.log(teacher)
   // const {_id, first_name, img, designation} = props.teacher
   const navigate = useNavigate();
 

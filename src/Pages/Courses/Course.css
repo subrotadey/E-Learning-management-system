@@ -1,0 +1,16 @@
+.course-card-style{
+    font-family:   'Montserrat', sans-serif;
+    border: none;
+    /* position: relative; */
+}
+.course_btn{
+    /* position: absolute; */
+    background-color: black !important;
+    border: none !important;
+}
+.course-btn:hover{
+    background-color: white !important;
+    color: #EAB970 !important;
+    transition: ease-out .3s;
+    border: #EAB970 !important;
+}
