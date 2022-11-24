@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Breadcrumb, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Blog from './Blog';
 
 const Blogs = () => {
@@ -316,7 +317,7 @@ const Blogs = () => {
           phone: "",
         },
         {
-          _id:6,
+          _id:16,
           img: "",
           heading: "Different fields of programming and suitable programming languages for it",
           description: `Nowadays many people want to make their career in programming. But many are hesitant to find the right programming language for their programming career. Many people start learning programming without thinking ahead. But later realized that he is not interested in the tasks in which that programming language is applied.
@@ -817,23 +818,26 @@ const Blogs = () => {
       console.log(blogInfo2);
 
     return (
-      <Container>
-        <div>
-        
-            <h1 className='border-style'>
-                <span>AWESOME</span>
-                TEACHERS</h1>
-            <h5>Phasellus non dolor nibh. Nullam elementum tellus pretium feugiat. Cras dictum tellus dui, vitae sollicitudin ipsum tincidunt in. Sed tincidunt tristique enim sed sollcitudin.</h5>
-        </div>
-            <Row xs={1} sm={2} md={4} className="g-4 my-5 d-flex justify-content-center">
+      <div>
+        <div className='breadcrumb-style2'>
+                <Container className='py-2'>
+                <h1 className='px-0'>Blogs</h1>
+                <Breadcrumb>
+                  <Breadcrumb.Item><Link className='text-white' to="/">Home</Link></Breadcrumb.Item>
+                  <Breadcrumb.Item active>blog</Breadcrumb.Item>
+                </Breadcrumb>
+                </Container>
+            </div>
+            <Row xs={1} sm={1} md={1} className="g-4 my-5 d-flex justify-content-center">
+              <h1 className='text-center'>Our Best Blogs</h1>
             {
-                blogInfo2.map(blog =><Blog
+                blogInfo.map(blog =><Blog
                     key={blog._id}
                     blog={blog}
                 ></Blog>)
             }
             </Row>
-      </Container>
+      </div>
     );
 };
 

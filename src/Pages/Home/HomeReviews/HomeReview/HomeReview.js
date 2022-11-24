@@ -9,7 +9,7 @@ const HomeReview = ({ review }) => {
                 <Card.Body>
                   <Card.Title>{review.name}</Card.Title>
                   <Card.Text  className='text-wrap'>
-                    <p>{review.description}</p>
+                    <small>{review.description}</small>
                   </Card.Text>
                 </Card.Body>
                 

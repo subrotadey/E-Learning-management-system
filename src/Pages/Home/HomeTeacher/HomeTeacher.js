@@ -3,21 +3,24 @@ import { Card, Col } from 'react-bootstrap';
 import { BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
 import './HomeTeacher.css'
 
-const HomeTeacher = ({ teach }) => {
+const HomeTeacher = (props) => {
+
+  const { img,first_name,last_name, designation} = props.teach;
+
     return (
         
             <Col className='teacher-card-style text-center mx-3 card-height'>
               <Card>
-                <Card.Img variant="top" src={teach.img} className='img-trans'/>
+                <Card.Img variant="top" src={img} className='img-trans'/>
                 <div className='d-flex justify-content-around fs-1 ico-style m-4'>
                 <BsFacebook></BsFacebook>
                 <BsTwitter></BsTwitter>
                 <BsLinkedin></BsLinkedin>
                 </div>
                 <Card.Body>
-                  <Card.Title className='fw-bold'>{teach.name}</Card.Title>
+                  <Card.Title className='fw-bold'>{first_name} {last_name}</Card.Title>
                   <Card.Text>
-                    <small>{teach.designation}</small>
+                    <small>{designation}</small>
                   </Card.Text>
                 </Card.Body>
                 
