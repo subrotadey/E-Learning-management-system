@@ -17,7 +17,8 @@ import TeacherDetails from "./Pages/Teachers/TeacherDetails";
 import ScrollToTop from "react-scroll-to-top";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import UpdateUser from "./Pages/Dashboard/UpdateUser/UpdateUser";
-import MessengerCustomerChat from "react-messenger-customer-chat/lib/MessengerCustomerChat";
+// import MessengerSendToMessenger from "react-messenger-send-to-messenger";
+// import MessengerCustomerChat from "react-messenger-customer-chat/lib/MessengerCustomerChat";
 
 function App() {
   return (
@@ -39,11 +40,11 @@ function App() {
       </Routes>
       <Footer></Footer>
       <ScrollToTop smooth color="black" className="scroll_top"></ScrollToTop>
-      <MessengerCustomerChat
-        pageId="100087894052175"
+      {/* <MessengerSendToMessenger
+        pageId="106685705609442"
         appId="606751324554237"
-      />
-      ,
+      /> */}
+      {/* <MessengerCustomerChat pageId="106685705609442" appId="606751324554237" /> */}
     </div>
   );
 }
