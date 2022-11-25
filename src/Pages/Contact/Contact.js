@@ -2,7 +2,6 @@ import React from 'react';
 import { Breadcrumb, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Contact.css'
-import bg from '../../assets/images/bg2.svg'
 
 const Contact = () => {
     return (
