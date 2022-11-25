@@ -37,7 +37,7 @@ const Contact = () => {
                 <fieldset>
                   <button name="submit" type="submit" className="contact-submit" data-submit="...Sending">Submit</button>
                 </fieldset>
-                <p className="copyright">Designed by <a href="https://edulogy.netlify.app" target="_blank" title="edulogy">Edulogy</a></p>
+                <p className="copyright">Designed by <a href="https://edulogy.netlify.app" title="edulogy">Edulogy</a></p>
               </form>
             </div>
         </div>
