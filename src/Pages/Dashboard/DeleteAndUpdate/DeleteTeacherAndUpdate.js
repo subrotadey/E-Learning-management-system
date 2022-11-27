@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Dash = () => {
+const DeleteTeacherAndUpdate = () => {
     const [users, setUsers] = useState([]);
     useEffect( () => {
-        fetch('http://localhost:5000/user')
+        fetch('http://localhost:5000/teacher')
         .then(res => res.json())
         .then(data => setUsers(data));
 
@@ -16,7 +16,7 @@ const Dash = () => {
         const proceed = window.confirm('Are you want to delete?');
         if(proceed){
             console.log('Deleting user with id,', id);
-            const url = `http://localhost:5000/user/${id}`
+            const url = `http://localhost:5000/teacher/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
@@ -32,12 +32,12 @@ const Dash = () => {
     }
     return (
         <div>
-            <h2>Available Users: {users.length}</h2>
+            <h2>Available Teachers: {users.length}</h2>
             <ul>
                 {
                     users.map(user=> <li
                     key={user._id}
-                    >{user.name}
+                    >{user.first_name}
                     <Link to={`/update/${user._id}`}><button>Update</button></Link>
                     <button onClick={() => handleUserDelete(user._id)}>X</button>
                     </li> )
@@ -48,4 +48,4 @@ const Dash = () => {
     );
 };
 
-export default Dash;
+export default DeleteTeacherAndUpdate;

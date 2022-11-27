@@ -2,17 +2,16 @@
 import { Button, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useTeachers from '../../../hooks/useTeachers';
-import Loading from '../../Shared/Loading';
 import HomeTeacher from '../HomeTeacher/HomeTeacher';
 
 import './HomeTeachers.css'
 
 const HomeTeachers = () => {
 
-    const [teachers, isLoading] = useTeachers();
-    if(isLoading){
-        return <Loading></Loading>
-    }
+    const [teachers] = useTeachers();
+    // if(isLoading){
+    //     return <Loading></Loading>
+    // }
     // console.log(teachers);
 
 //       const [teachers, setTeachers] = useState([]);

@@ -10,29 +10,6 @@ import './Teachers.css'
 
 const Teachers = () => {
     const [teachers, setTeachers] = useTeachers();
-
-    const handleUser = (event) => {
-        event.preventDefault();
-        const first_name = event.target.first_name.value;
-        const email = event.target.email.value;
-        const user = { first_name, email };
-    
-        //post data to server
-        fetch("http://localhost:5000/user", {
-          method: "POST", //or 'PUT'
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(user),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            const newUsers =[...teachers, data];
-            setTeachers(newUsers);
-            console.log(data);
-          });
-      };
-
     return (
         <div>
             <div className='breadcrumb-style'>
@@ -45,13 +22,6 @@ const Teachers = () => {
                 </Container>
             </div>
             <Container>
-        <h2>My own data</h2>
-        <form action="" onSubmit={handleUser}>
-          <input type="text" name="first_name" placeholder="Name" required />
-          <input type="email" name="email" id="" placeholder="Email" required />
-          {/* <input type="password" name="password" id="" placeholder='password' /> */}
-          <input type="submit" value="Add user" />
-        </form>
       </Container>
             
             <Container>

@@ -1,11 +1,13 @@
 import React from "react";
 import logo from '../../assets/images/logo.png'
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 // import {  NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import './Footer.css'
+import useFirebase from "../../hooks/useFirebase";
 
 const Navbars = () => {
+  const {user, handleGoogleSignOut} = useFirebase();
   return (
       <Navbar bg="dark" variant="dark" sticky="top" expand="md" collapseOnSelect className="nav_style">
         <Container className="">
@@ -31,7 +33,19 @@ const Navbars = () => {
             <Link className="nav-link" to="/about">About</Link>
             <Link className="nav-link" to="/contact">Contact</Link>
             <Link className="nav-link" to="/dashboard">Dashboard</Link>
-            <Link className="nav-link" to="/login">Login</Link>
+            {
+              user.uid 
+              ? 
+              <Button onClick={handleGoogleSignOut}>Sign Out</Button> 
+              && 
+              <p className="text-white my-auto mx-2">{user.displayName}</p>
+              &&
+              <img  src={user.photoURL} alt="" />
+              :
+              <Link className="nav-link" to="/login">Login</Link>
+            }
+            
+            
           </Nav>
         </Navbar.Collapse>
         </Container>

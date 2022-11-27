@@ -7,7 +7,7 @@ const useTeachers = () => {
   const [teachers, setTeachers] = useState([]);
 
   useEffect(() => {
-    fetch("/teachers.json")
+    fetch("http://localhost:5000/teacher")
       .then((res) => res.json())
       .then((data) => setTeachers(data));
   }, []);

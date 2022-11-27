@@ -1,6 +1,6 @@
 import "./App.css";
 import * as React from "react";
-import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
@@ -17,9 +17,13 @@ import TeacherDetails from "./Pages/Teachers/TeacherDetails";
 import ScrollToTop from "react-scroll-to-top";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import UpdateUser from "./Pages/Dashboard/UpdateUser/UpdateUser";
+// import app from "./firebase.init";
+// import { getAuth } from "firebase/auth";
+
 // import MessengerSendToMessenger from "react-messenger-send-to-messenger";
 // import MessengerCustomerChat from "react-messenger-customer-chat/lib/MessengerCustomerChat";
 
+// const auth = getAuth(app);
 function App() {
   return (
     <div className="App">

@@ -24,7 +24,7 @@ const TeacherDetails = () => {
     console.log(searchTeacher);
     return (
         <div>
-            <img src={searchTeacher?.img} alt="" />
+            <img src={searchTeacher?.img_link} alt="" />
             <h2>{searchTeacher?.first_name}</h2>
 
         </div>

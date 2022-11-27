@@ -5,13 +5,13 @@ import './HomeTeacher.css'
 
 const HomeTeacher = (props) => {
 
-  const { img,first_name,last_name, designation} = props.teach;
+  const { img_link, first_name,last_name, designation} = props.teach;
 
     return (
         
             <Col className='teacher-card-style text-center mx-3 card-height'>
               <Card>
-                <Card.Img variant="top" src={img} className='img-trans'/>
+                <Card.Img variant="top" src={img_link} className='img-trans'/>
                 <div className='d-flex justify-content-around fs-1 ico-style m-4'>
                 <BsFacebook></BsFacebook>
                 <BsTwitter></BsTwitter>
