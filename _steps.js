@@ -9,4 +9,8 @@
  * 7. import getAuth from firebase/auth and create auth = getAuth(app)
  * 8. turn on google authentication (firebase > authentication > enable google sign in)
  * 9. create google provider
+ *
+ *
+ * ended -58.4
+ * start - 58.5
  */

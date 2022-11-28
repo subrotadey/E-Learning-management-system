@@ -33,19 +33,15 @@ const Navbars = () => {
             <Link className="nav-link" to="/about">About</Link>
             <Link className="nav-link" to="/contact">Contact</Link>
             <Link className="nav-link" to="/dashboard">Dashboard</Link>
+            <span className="text-white my-auto">{user?.displayName && user.displayName}</span>
+            <img style={{width: '40px'}} className="mx-2" src={user?.photoURL && user.photoURL} alt="" />
             {
-              user.uid 
+              user?.uid 
               ? 
-              <Button onClick={handleGoogleSignOut}>Sign Out</Button> 
-              && 
-              <p className="text-white my-auto mx-2">{user.displayName}</p>
-              &&
-              <img  src={user.photoURL} alt="" />
+              <Button onClick={handleGoogleSignOut}>Sign Out</Button>
               :
               <Link className="nav-link" to="/login">Login</Link>
-            }
-            
-            
+            } 
           </Nav>
         </Navbar.Collapse>
         </Container>
