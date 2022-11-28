@@ -12,51 +12,33 @@ import {
 } from "firebase/auth";
 import app from "../../firebase.init";
 import { useState } from "react";
-import useFirebase from "../../hooks/useFirebase";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const auth = getAuth(app);
 const Login = () => {
+  const [signInWithGoogle, user, loading] = useSignInWithGoogle(auth);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const {handleGoogleSignIn} = useFirebase();
+  const from = location?.state?.from?.pathname || '/';
 
-  // const [user, setUser] = useState({});
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+    .then( () => {
+      navigate(from, {replace: true})
+    })
+  }
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [registered, setRegistered] = useState(false);
-  const [name, setName] = useState('')
+  const [name, setName] = useState("");
 
-  const handleNameBlur = e => {
+  const handleNameBlur = (e) => {
     setName(e.target.value);
-  }
-
-  // const provider = new GoogleAuthProvider();
-/*
-   signIn With Google
-  const handleGoogleSignIn = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        // The signed-in user info.
-        const user = result.user;
-        setUser(user);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        console.log(errorCode);
-      });
   };
 
-  const handleGoogleSignOut = () => {
-    signOut(auth)
-      .then(() => {
-        setUser({});
-      })
-      .catch((error) => {
-        setUser({});
-      });
-  };
-
-*/
   const handleRegisterChange = (e) => {
     setRegistered(e.target.checked);
   };
@@ -79,7 +61,7 @@ const Login = () => {
 
     if (registered) {
       signInWithEmailAndPassword(auth, email, password)
-        .then(result => {
+        .then((result) => {
           const user = result.user;
           console.log(user);
         })
@@ -102,41 +84,40 @@ const Login = () => {
         });
     }
     setEmail("");
-          setPassword("");
-          e.target.reset();
+    setPassword("");
+    e.target.reset();
     e.preventDefault();
   };
 
   // Update a user's profile
   const setUserName = () => {
     updateProfile(auth.currentUser, {
-      displayName: name
+      displayName: name,
     })
-    .then(() => {
-      console.log('updating name');
-    })
-    .catch(error => {
-      setError(error.message);
-    })
-  }
+      .then(() => {
+        console.log("updating name");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
   const verifyEmail = () => {
-    sendEmailVerification(auth.currentUser)
-    .then(() => {
-      console.log('Email Verification send');
+    sendEmailVerification(auth.currentUser).then(() => {
+      console.log("Email Verification send");
     });
   };
 
   const handleForgetPassword = () => {
     sendPasswordResetEmail(auth, email)
-  .then(() => {
-    console.log('Email Send');
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    // const errorMessage = error.message;
-    console.log(errorCode);
-  });
-  }
+      .then(() => {
+        console.log("Email Send");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        // const errorMessage = error.message;
+        console.log(errorCode);
+      });
+  };
 
   return (
     <section className="login py-5 bg-light">
@@ -150,17 +131,19 @@ const Login = () => {
               Please {registered ? "Login" : "Register"}
             </h1>
             <form onSubmit={handleFormSubmit}>
-              {!registered && <div className="form-row pt-5">
-                <div className="offset-1 col-lg-10">
-                  <input
-                    onBlur={handleNameBlur}
-                    type="text"
-                    className="inp px-3"
-                    placeholder="Your name..."
-                    required
-                  />
+              {!registered && (
+                <div className="form-row pt-5">
+                  <div className="offset-1 col-lg-10">
+                    <input
+                      onBlur={handleNameBlur}
+                      type="text"
+                      className="inp px-3"
+                      placeholder="Your name..."
+                      required
+                    />
+                  </div>
                 </div>
-              </div>}
+              )}
               <div className="form-row pt-4">
                 <div className="offset-1 col-lg-10">
                   <input
@@ -197,7 +180,9 @@ const Login = () => {
                   <small className="text-danger">{error}</small>
                 </div>
                 {/* <Link className=""></Link> */}
-                <Button onClick={handleForgetPassword} variant="link">Forget password?</Button>
+                <Button onClick={handleForgetPassword} variant="link">
+                  Forget password?
+                </Button>
               </div>
 
               <div className="row py-3">
@@ -212,14 +197,13 @@ const Login = () => {
             {/* {user.email ? (
               <button onClick={handleGoogleSignOut}>Google Sign Out</button>
             ) : ( */}
-              <button className="text-center" onClick={handleGoogleSignIn}>
-                <span>
-                  <i className="fab fa-google-plus"></i>
-                </span>{" "}
-                Google Sign In
-              </button>
+            <button className="text-center" onClick={handleGoogleSignIn}>
+              <span>
+                <i className="fab fa-google-plus"></i>
+              </span>{" "}
+              Google Sign In
+            </button>
             {/* )} */}
-            
           </div>
         </Row>
       </Container>

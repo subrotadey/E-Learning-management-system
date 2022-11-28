@@ -1,13 +1,16 @@
 import React from "react";
 import logo from '../../assets/images/logo.png'
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
-// import {  NavDropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import './Footer.css'
-import useFirebase from "../../hooks/useFirebase";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
+import { getAuth } from "firebase/auth";
+import app from "../../firebase.init";
 
+const auth =getAuth(app);
 const Navbars = () => {
-  const {user, handleGoogleSignOut} = useFirebase();
+  const [user] = useAuthState(auth);
+  const [signOut] = useSignOut(auth);
   return (
       <Navbar bg="dark" variant="dark" sticky="top" expand="md" collapseOnSelect className="nav_style">
         <Container className="">
@@ -32,13 +35,17 @@ const Navbars = () => {
             <Link className="nav-link" to="/blogs">Blogs</Link>
             <Link className="nav-link" to="/about">About</Link>
             <Link className="nav-link" to="/contact">Contact</Link>
-            <Link className="nav-link" to="/dashboard">Dashboard</Link>
+            {
+              user && <>
+              <Link className="nav-link" to="/dashboard">Dashboard</Link>
+              </>
+            }
             <span className="text-white my-auto">{user?.displayName && user.displayName}</span>
             <img style={{width: '40px'}} className="mx-2" src={user?.photoURL && user.photoURL} alt="" />
             {
               user?.uid 
               ? 
-              <Button onClick={handleGoogleSignOut}>Sign Out</Button>
+              <Button onClick={() => signOut()}>Sign Out</Button>
               :
               <Link className="nav-link" to="/login">Login</Link>
             } 

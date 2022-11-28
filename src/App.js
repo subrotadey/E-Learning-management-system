@@ -17,6 +17,7 @@ import TeacherDetails from "./Pages/Teachers/TeacherDetails";
 import ScrollToTop from "react-scroll-to-top";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import UpdateUser from "./Pages/Dashboard/UpdateUser/UpdateUser";
+import RequireAuth from "./Pages/RequireAuth/RequireAuth";
 // import app from "./firebase.init";
 // import { getAuth } from "firebase/auth";
 
@@ -37,10 +38,15 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        
         <Route path="/update/:id" element={<UpdateUser />}></Route>
         <Route path="/login" element={<Login />} />
         <Route path="/details/:id" element={<TeacherDetails />} />
+        <Route path="/dashboard" element={
+          <RequireAuth>
+            <Dashboard />
+          </RequireAuth>
+        } />
       </Routes>
       <Footer></Footer>
       <ScrollToTop smooth color="black" className="scroll_top"></ScrollToTop>
