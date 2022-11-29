@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
-// import useTeachers from '../../hooks/useTeachers';
 import './Teacher.css'
 
 const Teacher = (props) => {
@@ -10,8 +9,8 @@ const Teacher = (props) => {
   const {_id, first_name,last_name, img_link, designation} = props.teacher;
   const navigate = useNavigate();
 
-  const teacherDetails = () => {
-    navigate(`/details/${_id}`)
+  const teachersDetails = () => {
+    navigate(`/teacherDetails/${_id}`)
   }
   
     return (
@@ -31,7 +30,7 @@ const Teacher = (props) => {
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className='d-flex justify-content-center'>
-                  <Button onClick={teacherDetails} className="footer-btn" bg="warning" >View Details</Button>
+                  <Button onClick={teachersDetails} className="footer-btn" bg="warning" >View Details</Button>
                 </Card.Footer>
               </Card>
             </Col>

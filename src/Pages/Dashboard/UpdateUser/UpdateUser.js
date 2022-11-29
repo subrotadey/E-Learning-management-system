@@ -6,12 +6,13 @@ import { useParams } from "react-router-dom";
 const UpdateUser = () => {
   const { id } = useParams();
   const [user, setUser] = useState({});
+
   useEffect(() => {
     const url = `http://localhost:5000/teacher/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setUser(data));
-  }, []);
+  }, [id]);
 
   const handleUpdateTeacher = (event) => {
     event.preventDefault();
@@ -46,22 +47,22 @@ const UpdateUser = () => {
       <form id="contact" onSubmit={handleUpdateTeacher} className='form-style'>
         <h3>Updating Teacher {user.first_name}</h3>
         <fieldset>
-          <input placeholder="First_Name" type="text" tabIndex={1} required autoFocus/>
+          <input  name="first_name" placeholder="First_Name" type="text" tabIndex={1} required autoFocus/>
         </fieldset>
         <fieldset>
-          <input placeholder="Last_Name" type="text" tabIndex={1} required autoFocus/>
+          <input  name="last_name" placeholder="Last_Name" type="text" tabIndex={1} required autoFocus/>
         </fieldset>
         <fieldset>
-          <input placeholder="Image_Link" type="text" tabIndex={1} required autoFocus/>
+          <input  name="img_link" placeholder="Image_Link" type="text" tabIndex={1} required autoFocus/>
         </fieldset>
         <fieldset>
-          <input placeholder="Email Address" type="email" tabIndex={2} required/>
+          <input  name="email" placeholder="Email Address" type="email" tabIndex={2} required/>
         </fieldset>
         <fieldset>
-          <input placeholder="designation" type="text" tabIndex={3} required/>
+          <input  name="designation" placeholder="designation" type="text" tabIndex={3} required/>
         </fieldset>
         <fieldset>
-          <textarea placeholder="Description...." tabIndex={5} required/>
+          <textarea  name="description" placeholder="Description...." tabIndex={5} required/>
         </fieldset>
         <fieldset>
           <button name="update" type="submit" className="contact-submit" data-submit="...Sending">Update User</button>

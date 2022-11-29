@@ -1,9 +1,15 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './Course.css'
 
 const Course = (props) => {
-  const {img, price, heading} = props.course;
+  const {_id, img, price, heading} = props.course;
+  const navigate = useNavigate();
+
+  const coursesDetails = () => {
+    navigate(`/courseDetails/${_id}`)
+  }
     return (
         <>
             <Col className='course-card-style'>
@@ -16,7 +22,7 @@ const Course = (props) => {
                   </Card.Text>
                 </Card.Body>
                   <Card.Footer className='d-flex justify-content-center'>
-                    <Button className="footer-btn w-100" bg="warning" >View More</Button>
+                    <Button onClick={coursesDetails} className="footer-btn w-100" bg="warning" >View More</Button>
                   </Card.Footer>
               </Card>
             </Col>
