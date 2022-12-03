@@ -53,7 +53,7 @@ const Dashboard = () => {
             <AddCourse/>
             </Tab.Pane>
             <Tab.Pane eventKey="fifth">
-            <DeleteCourseAndUpdate></DeleteCourseAndUpdate>
+              <DeleteCourseAndUpdate></DeleteCourseAndUpdate>
             </Tab.Pane>
           </Tab.Content>
         </Col>

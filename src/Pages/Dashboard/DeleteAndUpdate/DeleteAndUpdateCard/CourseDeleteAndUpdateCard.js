@@ -30,7 +30,7 @@ const CourseDeleteAndUpdateCard = (props) => {
             </div>
             <div className='d-flex justify-content-end'>
                 <div>
-                    <Link className="m-3" to={`/update/${_id}`}><button className=" btn btn-info">Update</button></Link>
+                    <Link className="m-3" to={`/updateCourse/${_id}`}><button className=" btn btn-info">Update</button></Link>
                 </div>
                 <div>
                     <button className="btn btn-danger" onClick={() => handleCourseDelete(_id)}>Delete</button>
