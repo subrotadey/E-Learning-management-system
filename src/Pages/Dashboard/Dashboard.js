@@ -19,7 +19,7 @@ const Dashboard = () => {
       <Row>
         <Col sm={3}>
           <Nav variant="pills" className="flex-column">
-          <h1 className="text-center text-info">DashBoard</h1>
+          <h1 className="text-center" >DashBoard</h1>
             <Nav.Item>
               <Nav.Link eventKey="first">My Booking course</Nav.Link>
             </Nav.Item>

@@ -19,12 +19,10 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import UpdateUser from "./Pages/Dashboard/UpdateUser/UpdateUser";
 import RequireAuth from "./Pages/RequireAuth/RequireAuth";
 import CourseDetails from "./Pages/Courses/CourseDetails";
-import Checkout from "./Pages/Courses/Checkout/Checkout";
 import SignUp from "./Pages/Login/SignUp";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import MyAppoinments from "./Pages/Dashboard/MyBookingSlot";
-import MyReview from "./Pages/Dashboard/MyReview";
+import Payment from "./Pages/Dashboard/Payment";
 // import app from "./firebase.init";
 // import { getAuth } from "firebase/auth";
 
@@ -47,8 +45,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/checkout" element={<Checkout />} />
-        {/* <Route path="/courseModal" element={<CourseModal />} /> */}
+        <Route path="/dashboard/:id" element={<Payment />} />
         <Route path="/updateTeacher/:id" element={<UpdateUser />} />
         <Route path="/teacherDetails/:id" element={<TeacherDetails />} />
         <Route path="/courseDetails/:id" element={

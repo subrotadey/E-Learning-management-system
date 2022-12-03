@@ -9,7 +9,7 @@ import {
   Row,
 } from "react-bootstrap";
 import { useQuery } from "react-query";
-import { Link, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import bg from "../../assets/images/bg1.svg";
 import Loading from "../Shared/Loading";
 import { DayPicker } from "react-day-picker";
@@ -18,7 +18,7 @@ import { useState } from "react";
 import { format } from "date-fns";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const CourseDetails = () => {
   const [date] = useState(new Date());

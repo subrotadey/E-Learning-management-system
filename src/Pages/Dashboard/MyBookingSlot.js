@@ -1,8 +1,9 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Table } from "react-bootstrap";
+import { Button, Table } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
 
 const MyBookingSlot = () => {
@@ -30,6 +31,7 @@ const MyBookingSlot = () => {
                 <th>Course Name</th>
                 <th>Email</th>
                 <th>Date</th>
+                <th>Payment</th>
             </tr>
           </thead>
           <tbody>
@@ -42,6 +44,11 @@ const MyBookingSlot = () => {
                     <td>{book.bookingName}</td>
                     <td>{book.email}</td>
                     <td>{book.date}</td>
+                    <td>
+                      {(book.price && !book.paid) && <Link to={`/dashboard/${book._id}`}><Button variant="outline-info">PAY</Button></Link>}
+                      {(book.price && book.paid) && <Button variant="success" disabled>Paid</Button>}
+                      
+                    </td>
                   </tr>)
             }
             
