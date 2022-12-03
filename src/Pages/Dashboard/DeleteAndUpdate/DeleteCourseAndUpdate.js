@@ -7,7 +7,7 @@ const DeleteCourseAndUpdate = () => {
   const [courses] = useCourses();
   return (
     <div>
-        <h2>Available Teachers: {courses.length}</h2>
+        <h2 className="text-center text-info">Available Courses: {courses.length}</h2>
         <Container>
             {
                 courses.map(course =><CourseDeleteAndUpdateCard

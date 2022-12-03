@@ -30,7 +30,6 @@ const AddTeachers = () => {
 
   return (
     <div className="contact-style">
-      
       <form  onSubmit={handleAddUser} id="contact" className='form-style'>
       <h2>Please add a new Teacher</h2>
         <fieldset>

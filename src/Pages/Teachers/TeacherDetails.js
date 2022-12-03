@@ -15,7 +15,7 @@ const TeacherDetails = () => {
 
     console.log(teacher);
     return (
-        <div  style={{ 
+        <Container className='my-5'  style={{ 
             backgroundImage: `url(${bg})` 
           }}>
             <Container className='d-flex  justify-content-around'>
@@ -29,7 +29,7 @@ const TeacherDetails = () => {
                 <img src={teacher?.img_link} alt="" />
             </div>
         </Container>
-        </div>
+        </Container>
     );
 };
 

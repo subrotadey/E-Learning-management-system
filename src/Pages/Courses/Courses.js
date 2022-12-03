@@ -6,7 +6,6 @@ import "./Course.css";
 
 const Courses = () => {
   const [courses] = useCourses();
-
   return (
     <div>
       <div className="breadcrumb-style">

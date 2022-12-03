@@ -56,22 +56,22 @@ const Footer = () => {
                       <ul>
                         <ol>
                           <p>
-                            <a href="/">Countries</a>
+                            <a href="/">home</a>
                           </p>
                           <p>
-                            <a href="/">Religion</a>
+                            <a href="/">blog</a>
                           </p>
                           <p>
-                            <a href="/">Districts</a>
+                            <a href="/">facebook</a>
                           </p>
                           <p>
-                            <a href="/">Airports</a>
+                            <a href="/">twitter</a>
                           </p>
                           <p>
-                            <a href="/">Hotels</a>
+                            <a href="/">Instagram</a>
                           </p>
                           <p>
-                            <a href="/">Interested Places</a>
+                            <a href="/">About us</a>
                           </p>
                         </ol>
                       </ul>
@@ -86,16 +86,16 @@ const Footer = () => {
                             <a href="/">Apartments</a>
                           </p>
                           <p>
-                            <a href="/">Resorts</a>
+                            <a href="/">Popular course</a>
                           </p>
                           <p>
-                            <a href="/">Hostels</a>
+                            <a href="/">Best Buy seller</a>
                           </p>
                           <p>
-                            <a href="/">Guest Houses</a>
+                            <a href="/">Programming</a>
                           </p>
                           <p>
-                            <a href="/">Villas</a>
+                            <a href="/">Web Development</a>
                           </p>
                         </ol>
                       </ul>

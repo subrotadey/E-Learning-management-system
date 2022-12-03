@@ -12,7 +12,7 @@
   text-rendering: optimizeLegibility;
 }
 .breadcrumb-style2{
-    background-color: #CDFCF6;
+    background-color: #EAB970;
 }
 
 .form-style{
@@ -69,10 +69,10 @@
   font-weight: 400;
 }
 .contact-submit{
-    background-color: rgb(94, 184, 94) !important;
+    background-color: rgb(94, 184, 94) ;
 }
 .contact-submit:hover{
-    background-color: rgb(138, 218, 154) !important;
+    background-color: rgb(138, 218, 154) ;
 }
 
 fieldset {

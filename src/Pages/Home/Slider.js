@@ -16,7 +16,6 @@ const Slider = () => {
               <Carousel.Caption>
               <h3>Explopre your Talent</h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                {/* <button className='btn-grad'>get started</button> */}
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
