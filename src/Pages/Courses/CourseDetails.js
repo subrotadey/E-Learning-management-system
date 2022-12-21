@@ -9,7 +9,7 @@ import {
   Row,
 } from "react-bootstrap";
 import { useQuery } from "react-query";
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import bg from "../../assets/images/bg1.svg";
 import Loading from "../Shared/Loading";
 import { DayPicker } from "react-day-picker";
@@ -18,6 +18,7 @@ import { useState } from "react";
 import { format } from "date-fns";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import Review from "./Review";
 // import { toast } from "react-toastify";
 
 const CourseDetails = () => {
@@ -27,11 +28,13 @@ const CourseDetails = () => {
   const handleShow = () => setShow(true);
   const [user] = useAuthState(auth);
   const formattedDate = format(date, "PP");
-  const [book, setBook] = useState("");
+  const [setBook] = useState("");
 
   const { id } = useParams();
   const { data: course, isLoading } = useQuery("course", () =>
-    fetch(`http://localhost:5000/course/${id}`).then((res) => res.json())
+    fetch(
+      `https://e-learning-management-system-git-095dad-subrotadey540-gmailcom.vercel.app/course/${id}`
+    ).then((res) => res.json())
   );
 
   const courseName = course?.heading;
@@ -40,7 +43,6 @@ const CourseDetails = () => {
   if (isLoading) {
     return <Loading />;
   }
-
 
   // console.log(user.email);
   const handleEnroll = (event) => {
@@ -66,7 +68,7 @@ const CourseDetails = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        alert("success")
+        alert("success");
         setBook(data);
       });
   };
@@ -192,10 +194,9 @@ const CourseDetails = () => {
         </div>
       </Container>
       <Container className="text-center">
-        <h2 className="text-center">Rating This Course</h2>
-
         <div>
-          <Button variant="outline-info">Enroll</Button>
+          <Review></Review>
+          {/* <Button variant="outline-info" className="">Review</Button> */}
         </div>
       </Container>
     </div>

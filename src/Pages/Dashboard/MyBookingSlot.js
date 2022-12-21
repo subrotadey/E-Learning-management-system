@@ -20,7 +20,7 @@ const MyBookingSlot = () => {
   return (
     <div>
       <h2 className="text-center text-info">
-        My Selected Course: {booked.length}
+        Selected Course: {booked.length}
       </h2>
       <div>
         <Table responsive striped border="info">

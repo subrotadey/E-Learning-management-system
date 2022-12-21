@@ -29,6 +29,7 @@ const Navbars = () => {
             <Link className="nav-link" to="/blogs">Blogs</Link>
             <Link className="nav-link" to="/about">About</Link>
             <Link className="nav-link" to="/contact">Contact</Link>
+            <Link className="nav-link" to="/contact">My Classes</Link>
             {/* <Link className="nav-link" to="/dashboard">Dashboard</Link> */}
             {
               user && <Link className="nav-link" to="/dashboard">Dashboard</Link>

@@ -10,52 +10,112 @@ const AddTeachers = () => {
     const designation = event.target.designation.value;
     const description = event.target.description.value;
 
-    const user = { first_name, last_name,img_link, email, designation,  description };
+    const user = {
+      first_name,
+      last_name,
+      img_link,
+      email,
+      designation,
+      description,
+    };
 
     //send data to the server
-    fetch("http://localhost:5000/teacher", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
+    fetch(
+      "https://e-learning-management-system-server-site.vercel.app/teacher",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(user),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log("success", data);
-        alert('user added successfully');
+        alert("user added successfully");
         event.target.reset();
       });
   };
 
   return (
     <div className="contact-style">
-      <form  onSubmit={handleAddUser} id="contact" className='form-style'>
-      <h2>Please add a new Teacher</h2>
+      <form onSubmit={handleAddUser} id="contact" className="form-style">
+        <h2>Please add a new Teacher</h2>
         <fieldset>
-          <input name="first_name" placeholder="First_Name" type="text" tabIndex="1" required autoFocus/>
+          <input
+            name="first_name"
+            placeholder="First_Name"
+            type="text"
+            tabIndex="1"
+            required
+            autoFocus
+          />
         </fieldset>
         <fieldset>
-          <input  name="last_name" placeholder="Last_Name" type="text" tabIndex="1" required autoFocus/>
+          <input
+            name="last_name"
+            placeholder="Last_Name"
+            type="text"
+            tabIndex="1"
+            required
+            autoFocus
+          />
         </fieldset>
         <fieldset>
-          <input name="img_link" placeholder="Image_Link" type="text" tabIndex="1" required autoFocus/>
+          <input
+            name="img_link"
+            placeholder="Image_Link"
+            type="text"
+            tabIndex="1"
+            required
+            autoFocus
+          />
         </fieldset>
         <fieldset>
-          <input  name="email" placeholder="Email Address" type="email" tabIndex="2" required/>
+          <input
+            name="email"
+            placeholder="Email Address"
+            type="email"
+            tabIndex="2"
+            required
+          />
         </fieldset>
         <fieldset>
-          <input name="designation" placeholder="designation" type="text" tabIndex="3" required/>
+          <input
+            name="designation"
+            placeholder="designation"
+            type="text"
+            tabIndex="3"
+            required
+          />
         </fieldset>
         <fieldset>
-          <textarea name="description" placeholder="Description...." tabIndex="5" required></textarea>
+          <textarea
+            name="description"
+            placeholder="Description...."
+            tabIndex="5"
+            required
+          ></textarea>
         </fieldset>
         <fieldset>
-          <button value="Add User" name="add" type="submit" className="contact-submit" data-submit="...Sending">Teacher add</button>
+          <button
+            value="Add User"
+            name="add"
+            type="submit"
+            className="contact-submit"
+            data-submit="...Sending"
+          >
+            Teacher add
+          </button>
         </fieldset>
-        <p className="copyright">Designed by <a href="https://edulogy.netlify.app" title="edulogy">Edulogy</a></p>
+        <p className="copyright">
+          Designed by{" "}
+          <a href="https://edulogy.netlify.app" title="edulogy">
+            Edulogy
+          </a>
+        </p>
       </form>
-      
     </div>
   );
 };

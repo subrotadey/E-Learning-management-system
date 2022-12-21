@@ -7,21 +7,11 @@ const useTeachers = () => {
   const [teachers, setTeachers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/teacher")
+    fetch("https://e-learning-management-system-server-site.vercel.app/teacher")
       .then((res) => res.json())
       .then((data) => setTeachers(data));
   }, []);
 
-  //   const {
-  //     data: teachers,
-  //     isLoading,
-  //     refetch,
-  //   } = useQuery("teachers", () =>
-  //     fetch("/teachers.json").then((res => res.json()))
-  //   );
-  //   if (isLoading) {
-  //     return <Loading></Loading>;
-  //   }
   return [teachers, setTeachers];
 };
 

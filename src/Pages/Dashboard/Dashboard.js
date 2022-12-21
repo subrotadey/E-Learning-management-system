@@ -21,7 +21,7 @@ const Dashboard = () => {
           <Nav variant="pills" className="flex-column">
           <h1 className="text-center" >DashBoard</h1>
             <Nav.Item>
-              <Nav.Link eventKey="first">My Booking course</Nav.Link>
+              <Nav.Link eventKey="first">Booking course</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link eventKey="second">Add Teachers</Nav.Link>

@@ -9,7 +9,7 @@ const CourseDeleteAndUpdateCard = (props) => {
         const proceed = window.confirm('Are you want to delete?');
         if(proceed){
             console.log('Deleting course with id,', id);
-            const url = `http://localhost:5000/course/${id}`
+            const url = `https://e-learning-management-system-git-095dad-subrotadey540-gmailcom.vercel.app/course/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

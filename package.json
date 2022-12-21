@@ -27,6 +27,7 @@
     "react-loader-spinner": "^5.3.4",
     "react-messenger-customer-chat": "^0.8.0",
     "react-query": "^3.39.2",
+    "react-rating-stars-component": "^2.2.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "react-scroll-to-top": "^3.0.0",

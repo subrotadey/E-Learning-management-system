@@ -1,6 +1,7 @@
 import React from 'react';
 import { Breadcrumb, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Review from '../Courses/Review';
 import './Contact.css'
 
 const Contact = () => {
@@ -16,23 +17,21 @@ const Contact = () => {
                 </Container>
             </div>
             <div class="contact-style">  
-              <form id="contact" action="" method="post" className='form-style'>
+              <form id="contact" action="https://formsubmit.co/el/cehexa" method="POST" className='form-style'>
                 <h3>Edulogy Contact Form</h3>
                 <h4>Contact us for custom quote</h4>
                 <fieldset>
-                  <input placeholder="Your name" type="text" tabindex="1" required autofocus/>
+                  <input name='name' placeholder="Your name" type="text" tabindex="1" required autofocus/>
                 </fieldset>
                 <fieldset>
-                  <input placeholder="Your Email Address" type="email" tabindex="2" required/>
+                  <input name='email' placeholder="Your Email Address" type="email" tabindex="2" required/>
                 </fieldset>
                 <fieldset>
-                  <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required/>
+                  <input name='phone' placeholder="Your Phone Number" type="tel" tabindex="3" required/>
                 </fieldset>
+                
                 <fieldset>
-                  <input placeholder="Your Web Site (optional)" type="url" tabindex="4" required/>
-                </fieldset>
-                <fieldset>
-                  <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+                  <textarea name='message' placeholder="Type your message here...." tabindex="5" required></textarea>
                 </fieldset>
                 <fieldset>
                   <button name="submit" type="submit" className="contact-submit" data-submit="...Sending">Submit</button>
@@ -40,6 +39,7 @@ const Contact = () => {
                 <p className="copyright">Designed by <a href="https://edulogy.netlify.app" title="edulogy">Edulogy</a></p>
               </form>
             </div>
+            <Review></Review>
         </div>
     );
 };

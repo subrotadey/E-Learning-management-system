@@ -23,7 +23,7 @@ const Teacher = (props) => {
                   <a href="www.twitter.com"><BsTwitter></BsTwitter></a>
                   <a href="www.linkedin.com"><BsLinkedin></BsLinkedin></a>
                 </div>
-                <Card.Body>
+                <Card.Body className='text-center'>
                   <Card.Title className='fw-bold'>{first_name}  {last_name}</Card.Title>
                   <Card.Text>
                     <small>{designation}</small>
