@@ -58,7 +58,7 @@ const CourseDetails = () => {
       phone: event.target.phone.value,
     };
 
-    fetch("http://localhost:5000/enrollment", {
+    fetch("https://e-learning-management-system-server-site.vercel.app/enrollment", {
       method: "POST",
       headers: {
         "content-type": "application/json",

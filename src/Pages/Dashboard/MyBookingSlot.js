@@ -12,7 +12,7 @@ const MyBookingSlot = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/enrollment?enrollment=${user.email}`)
+      fetch(`https://e-learning-management-system-server-site.vercel.app/enrollment?enrollment=${user.email}`)
         .then((res) => res.json())
         .then((data) => setBooked(data));
     }
