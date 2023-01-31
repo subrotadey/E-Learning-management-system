@@ -27,16 +27,13 @@ const AddCourse = () => {
     };
 
     //send data to the server
-    fetch(
-      "https://e-learning-management-system-git-095dad-subrotadey540-gmailcom.vercel.app/course",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(course),
-      }
-    )
+    fetch("https://edulogy.onrender.com/course", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(course),
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log("success", data);

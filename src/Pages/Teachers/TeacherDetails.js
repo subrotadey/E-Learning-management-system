@@ -9,9 +9,9 @@ import { useQuery } from "react-query";
 const TeacherDetails = () => {
   const { id } = useParams();
   const { data: teacher, isLoading } = useQuery("teacher", () =>
-    fetch(
-      `https://e-learning-management-system-server-site.vercel.app/teacher/${id}`
-    ).then((res) => res.json())
+    fetch(`https://edulogy.onrender.com/teacher/${id}`).then((res) =>
+      res.json()
+    )
   );
   if (isLoading) {
     return <Loading />;

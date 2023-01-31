@@ -7,7 +7,7 @@ const useTeachers = () => {
   const [teachers, setTeachers] = useState([]);
 
   useEffect(() => {
-    fetch("https://e-learning-management-system-server-site.vercel.app/teacher")
+    fetch("https://edulogy.onrender.com/teacher")
       .then((res) => res.json())
       .then((data) => setTeachers(data));
   }, []);

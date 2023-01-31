@@ -5,9 +5,7 @@ const useCourses = () => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    fetch(
-      "https://e-learning-management-system-git-095dad-subrotadey540-gmailcom.vercel.app/course"
-    )
+    fetch("https://edulogy.onrender.com/course")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);

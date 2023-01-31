@@ -12,7 +12,7 @@ const MyBookingSlot = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`https://e-learning-management-system-server-site.vercel.app/enrollment?enrollment=${user.email}`)
+      fetch(`https://edulogy.onrender.com/enrollment?enrollment=${user.email}`)
         .then((res) => res.json())
         .then((data) => setBooked(data));
     }
@@ -26,32 +26,36 @@ const MyBookingSlot = () => {
         <Table responsive striped border="info">
           <thead>
             <tr>
-                <th>#</th>
-                <th>Student Name</th>
-                <th>Course Name</th>
-                <th>Email</th>
-                <th>Date</th>
-                <th>Payment</th>
+              <th>#</th>
+              <th>Student Name</th>
+              <th>Course Name</th>
+              <th>Email</th>
+              <th>Date</th>
+              <th>Payment</th>
             </tr>
           </thead>
           <tbody>
-            {
-                booked.map((book, index) => <tr
-                key={index}
-                >
-                    <td>{index+1}</td>
-                    <td>{book.studentName}</td>
-                    <td>{book.bookingName}</td>
-                    <td>{book.email}</td>
-                    <td>{book.date}</td>
-                    <td>
-                      {(book.price && !book.paid) && <Link to={`/dashboard/${book._id}`}><Button variant="outline-info">PAY</Button></Link>}
-                      {(book.price && book.paid) && <Button variant="success" disabled>Paid</Button>}
-                      
-                    </td>
-                  </tr>)
-            }
-            
+            {booked.map((book, index) => (
+              <tr key={index}>
+                <td>{index + 1}</td>
+                <td>{book.studentName}</td>
+                <td>{book.bookingName}</td>
+                <td>{book.email}</td>
+                <td>{book.date}</td>
+                <td>
+                  {book.price && !book.paid && (
+                    <Link to={`/dashboard/${book._id}`}>
+                      <Button variant="outline-info">PAY</Button>
+                    </Link>
+                  )}
+                  {book.price && book.paid && (
+                    <Button variant="success" disabled>
+                      Paid
+                    </Button>
+                  )}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </Table>
       </div>

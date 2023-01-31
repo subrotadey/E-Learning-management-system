@@ -20,8 +20,8 @@ import UpdateUser from "./Pages/Dashboard/UpdateUser/UpdateUser";
 import RequireAuth from "./Pages/RequireAuth/RequireAuth";
 import CourseDetails from "./Pages/Courses/CourseDetails";
 import SignUp from "./Pages/Login/SignUp";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Payment from "./Pages/Dashboard/Payment";
 // import app from "./firebase.init";
 // import { getAuth } from "firebase/auth";
@@ -49,17 +49,22 @@ function App() {
         <Route path="/updateTeacher/:id" element={<UpdateUser />} />
         <Route path="/updateCourse/:id" element={<UpdateUser />} />
         <Route path="/teacherDetails/:id" element={<TeacherDetails />} />
-        <Route path="/courseDetails/:id" element={
-          <RequireAuth>
-            <CourseDetails/>
-          </RequireAuth>
-        } 
+        <Route
+          path="/courseDetails/:id"
+          element={
+            <RequireAuth>
+              <CourseDetails />
+            </RequireAuth>
+          }
         />
-        <Route path="/dashboard" element={
-          <RequireAuth>
-            <Dashboard />
-          </RequireAuth>
-        } ></Route>
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          }
+        ></Route>
       </Routes>
       <ToastContainer />
       <Footer></Footer>

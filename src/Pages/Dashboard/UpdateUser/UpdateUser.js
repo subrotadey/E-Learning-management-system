@@ -8,7 +8,7 @@ const UpdateUser = () => {
   const [user, setUser] = useState({});
 
   useEffect(() => {
-    const url = `https://e-learning-management-system-server-site.vercel.app/teacher/${id}`;
+    const url = `https://edulogy.onrender.com/teacher/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setUser(data));
@@ -33,7 +33,7 @@ const UpdateUser = () => {
     };
 
     //send data to the server
-    const url = `https://e-learning-management-system-server-site.vercel.app/teacher/${id}`;
+    const url = `https://edulogy.onrender.com/teacher/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

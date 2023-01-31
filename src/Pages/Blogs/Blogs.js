@@ -814,8 +814,8 @@ const Blogs = () => {
         },
       ];
 
-      const blogInfo2 = blogInfo.slice(0, 4);
-      console.log(blogInfo2);
+      // const blogInfo2 = blogInfo.slice(0, 4);
+      // console.log(blogInfo2);
 
     return (
       <div>

@@ -32,9 +32,7 @@ const CourseDetails = () => {
 
   const { id } = useParams();
   const { data: course, isLoading } = useQuery("course", () =>
-    fetch(
-      `https://e-learning-management-system-git-095dad-subrotadey540-gmailcom.vercel.app/course/${id}`
-    ).then((res) => res.json())
+    fetch(`https://edulogy.onrender.com/course/${id}`).then((res) => res.json())
   );
 
   const courseName = course?.heading;
@@ -58,7 +56,7 @@ const CourseDetails = () => {
       phone: event.target.phone.value,
     };
 
-    fetch("https://e-learning-management-system-server-site.vercel.app/enrollment", {
+    fetch("https://edulogy.onrender.com/enrollment", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -196,7 +194,6 @@ const CourseDetails = () => {
       <Container className="text-center">
         <div>
           <Review></Review>
-          {/* <Button variant="outline-info" className="">Review</Button> */}
         </div>
       </Container>
     </div>

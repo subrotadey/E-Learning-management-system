@@ -9,7 +9,7 @@ const TeacherDeleteAndUpdateCard = (props) => {
     const proceed = window.confirm("Are you want to delete?");
     if (proceed) {
       console.log("Deleting user with id,", id);
-      const url = `https://e-learning-management-system-server-site.vercel.app/teacher/${id}`;
+      const url = `https://edulogy.onrender.com/teacher/${id}`;
       fetch(url, {
         method: "DELETE",
       })

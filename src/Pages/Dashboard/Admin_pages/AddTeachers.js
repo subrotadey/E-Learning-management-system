@@ -20,16 +20,13 @@ const AddTeachers = () => {
     };
 
     //send data to the server
-    fetch(
-      "https://e-learning-management-system-server-site.vercel.app/teacher",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(user),
-      }
-    )
+    fetch("https://edulogy.onrender.com/teacher", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log("success", data);
